@@ -16,5 +16,4 @@ class Inventory extends Model
         'expired',
         'lokasi_simpan',
     ];
-    public $incrementing = false;
 }
