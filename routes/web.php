@@ -34,3 +34,5 @@ Route::resource('supplier', SupplierCRUDController::class);
 Route::resource('apoteker', ApotekerCRUDController::class);
 Route::resource('resep', resepController::class);
 Route::resource('inventories', InventoryCRUDController::class);
+Route::resource('pembelian', PembelianController::class);
+Route::resource('Transaksi', TransaksiController::class);
