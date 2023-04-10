@@ -31,7 +31,7 @@
               <input type="integer" name="idsupplier" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-            <a href="/transaksi" class="btn btn-danger">Kembali</a>
+            <a href="/pembelian" class="btn btn-danger">Kembali</a>
           </form>
         </div>
       </div>

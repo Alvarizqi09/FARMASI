@@ -18,7 +18,7 @@
     
     <h1 class='text-center'>Pembelian</h1>
     <div class="container">
-    <a  href="/tambahtransaksi" class="btn btn-success">+ Tambah</a>
+    <a  href="/tambahpembelian" class="btn btn-success">+ Tambah</a>
       <div class="row">
     @if ($message = Session::get('success'))
         <div class="alert alert-success" role="alert">
