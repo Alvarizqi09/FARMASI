@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\pegawaiController;
 use App\Http\Controllers\pegawaiData;
+use App\Http\Controllers\StockCRUDController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,4 @@ Route::get('/', function () {
 });
 
 Route::resource('pegawai', pegawaiController::class);
+Route::resource('stocks', StockCRUDController::class);
