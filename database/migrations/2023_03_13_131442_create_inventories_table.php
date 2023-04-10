@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('id_obat');
             $table->string('nama_obat');
             $table->string('jumlah_tersedia');
-            $table->string('expired');
+            $table->date('expired');
             $table->string('lokasi_simpan');
+
+            $table->primary('id_obat');
             $table->timestamps();
         });
     }
