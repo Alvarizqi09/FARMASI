@@ -11,12 +11,12 @@ class PembelianController extends Controller
     public function index(){        
 
         $data = Pembelian::all();
-        return view('datatransaksi',compact('data'));
+        return view('pembelian.datatransaksi',compact('data'));
     }
 
     public function tambahtransaksi(){        
 
-        return view('tambahdata');
+        return view('pembelian.tambahdata');
     }
 
     public function insertdata(Request $request){        
@@ -26,7 +26,7 @@ class PembelianController extends Controller
 
     public function tampilkandata($id){        
         $data = Pembelian::find($id);
-        return view('tampildata', compact('data'));
+        return view('pembelian.tampildata', compact('data'));
     }
 
     public function updatedata(Request $request, $id){        
