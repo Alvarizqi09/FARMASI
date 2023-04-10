@@ -48,7 +48,7 @@ Route::get('/delete/{id}',[TransaksiController::class, 'delete'])->name('delete'
 
 Route::get('/pembelian', [PembelianController::class, 'index'])->name('transaksi');
 
-Route::get('/tambahtransaksi', [PembelianController::class, 'tambahtransaksi'])->name('tambahtransaksi');
+Route::get('/tambahpembelian', [PembelianController::class, 'tambahpembelian'])->name('tambahpembelian');
 Route::post('/insertdata', [PembelianController::class, 'insertdata'])->name('insertdata');
 
 Route::get('/tampilkandata/{id}',[PembelianController::class, 'tampilkandata'])->name('tampilkandata');

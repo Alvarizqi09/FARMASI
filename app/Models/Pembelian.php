@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class pembelian extends Model
 {
     use HasFactory;
-    protected $table = 'pembelians';
+    protected $table = 'Pembelians';
     protected $fillable = [
         'idobat', 
         'idsupplier',

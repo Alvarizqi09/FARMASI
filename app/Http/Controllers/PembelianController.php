@@ -11,7 +11,7 @@ class PembelianController extends Controller
     public function index(){        
 
         $data = Pembelian::all();
-        return view('pembelian.datatransaksi',compact('data'));
+        return view('pembelian.datapembelian',compact('data'));
     }
 
     public function tambahtransaksi(){        
@@ -21,7 +21,7 @@ class PembelianController extends Controller
 
     public function insertdata(Request $request){        
         $data = Pembelian::create($request->all());
-        return redirect()->route('transaksi')->with('success',' Data Berhasil Di Tambahkan');
+        return redirect()->route('pembelian')->with('success',' Data Berhasil Di Tambahkan');
     }
 
     public function tampilkandata($id){        
@@ -32,12 +32,12 @@ class PembelianController extends Controller
     public function updatedata(Request $request, $id){        
         $data = Pembelian::find($id);
         $data->update($request->all());
-        return redirect()->route('transaksi')->with('success',' Data Berhasil Di Update');
+        return redirect()->route('pembelian')->with('success',' Data Berhasil Di Update');
     }
 
     public function delete($id){        
         $data = Pembelian::find($id);
         $data->delete();
-        return redirect()->route('transaksi')->with('success',' Data Berhasil Di Delete');
+        return redirect()->route('pembelian')->with('success',' Data Berhasil Di Delete');
     }
 }
