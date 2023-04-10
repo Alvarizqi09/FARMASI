@@ -6,8 +6,8 @@ use App\Http\Controllers\StockCRUDController;
 use App\Http\Controllers\ApotekerCRUDController;
 use App\Http\Controllers\InventoryCRUDController;
 use App\Http\Controllers\SupplierCRUDController;
-use App\Http\Controllers\PembelianController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\PembelianController;
 
 use Illuminate\Support\Facades\Route;
 
