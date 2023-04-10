@@ -80,7 +80,7 @@ class SupplierCRUDController extends Controller
 
             'alamat' => 'required',
             
-            'jenis_obat' => 'required',
+            'obat_tersedia' => 'required',
             
             'harga' => 'required',
            
@@ -152,7 +152,7 @@ class SupplierCRUDController extends Controller
 
             'alamat' => 'required',
             
-            'jenis_obat' => 'required',
+            'obat_tersedia' => 'required',
             
             'harga' => 'required',
            

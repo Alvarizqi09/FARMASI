@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('email');
             $table->string('alamat');
-            $table->string('jenis_obat');
+            $table->string('obat_tersedia');
             $table->string('harga');
                        
             

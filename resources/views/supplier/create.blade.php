@@ -107,9 +107,9 @@
 
             <div class="form-group">
 
-                <strong>Jenis Obat:</strong>
+                <strong>Obat Tersedia:</strong>
 
-                <input type="text" name="jenis_obat" class="form-control" placeholder="Jenis Obat">
+                <input type="text" name="obat_tersedia" class="form-control" placeholder="Obat Tersedia">
 
             </div>
 

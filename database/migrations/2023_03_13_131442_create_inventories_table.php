@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('expired');
             $table->string('lokasi_simpan');
 
-            $table->primary('id_obat');
+            // $table->primary('id_obat');
             $table->timestamps();
         });
     }

@@ -82,9 +82,9 @@
 
             <div class="form-group">
 
-                <strong>Jenis Obat:</strong>
+                <strong>Obat Tersedia:</strong>
 
-                {{ $supplier->jenis_obat }}
+                {{ $supplier->obat_tersedia}}
 
             </div>
 

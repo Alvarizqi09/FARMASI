@@ -15,7 +15,7 @@ class supplier extends Model
         'nama', 
         'email',
         'alamat',
-        'jenis_obat',
+        'obat_tersedia',
         'harga'
     ];
 }

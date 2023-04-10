@@ -53,7 +53,7 @@
             <th>Alamat</th>
             
             
-            <th>Jenis Obat</th>
+            <th>Obat Tersedia</th>
             
             <th>Harga</th>
 
@@ -78,7 +78,7 @@
             <td>{{ $suppliers->alamat }}</td>
             
             
-            <td>{{ $suppliers->jenis_obat }}</td>
+            <td>{{ $suppliers->obat_tersedia }}</td>
             <td>{{ $suppliers->harga }}</td>
             
             <td>
