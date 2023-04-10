@@ -11,12 +11,12 @@ class TransaksiController extends Controller
     public function index(){        
 
         $data = Transaksi::all();
-        return view('datatransaksi',compact('data'));
+        return view('Transaksi.datatransaksi',compact('data'));
     }
 
     public function tambahtransaksi(){        
 
-        return view('tambahdata');
+        return view('Transaksi.tambahdata');
     }
 
     public function insertdata(Request $request){        
@@ -26,7 +26,7 @@ class TransaksiController extends Controller
 
     public function tampilkandata($id){        
         $data = Transaksi::find($id);
-        return view('tampildata', compact('data'));
+        return view('Transaksi.tampildata', compact('data'));
     }
 
     public function updatedata(Request $request, $id){        
