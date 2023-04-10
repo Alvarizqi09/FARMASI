@@ -14,7 +14,7 @@ class PembelianController extends Controller
         return view('pembelian.datapembelian',compact('data'));
     }
 
-    public function tambahtransaksi(){        
+    public function tambahpembelian(){        
 
         return view('pembelian.tambahdata');
     }
