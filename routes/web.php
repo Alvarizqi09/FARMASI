@@ -3,6 +3,8 @@
 use App\Http\Controllers\pegawaiController;
 use App\Http\Controllers\pegawaiData;
 use App\Http\Controllers\StockCRUDController;
+use App\Http\Controllers\SupplierCRUDController;
+use App\Http\Controllers\ApotekerCRUDController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +24,5 @@ Route::get('/', function () {
 
 Route::resource('pegawai', pegawaiController::class);
 Route::resource('stocks', StockCRUDController::class);
+Route::resource('supplier', SupplierCRUDController::class);
+Route::resource('apoteker', ApotekerCRUDController::class);
