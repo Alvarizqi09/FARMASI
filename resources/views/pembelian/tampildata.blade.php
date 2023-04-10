@@ -24,11 +24,11 @@
             @csrf
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">ID Obat</label>
-              <input type="text" name="idobat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="integer" name="idobat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">ID Supplier</label>
-              <input type="text" name="idsupplier" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="integer" name="idsupplier" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             <a href="/transaksi" class="btn btn-danger">Kembali</a>
