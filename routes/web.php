@@ -1,8 +1,7 @@
 <?php
 
 use App\Http\Controllers\pegawaiController;
-use App\Http\Controllers\pegawaiData;
-use App\Http\Controllers\resep;
+use App\Http\Controllers\resepController;
 use App\Http\Controllers\StockCRUDController;
 use App\Http\Controllers\InventoryCRUDController;
 use Illuminate\Support\Facades\Route;
