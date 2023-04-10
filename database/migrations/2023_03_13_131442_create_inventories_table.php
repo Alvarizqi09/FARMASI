@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('inventories', function (Blueprint $table) {
-            // $table->id();
+            $table->id();
             $table->string('id_obat');
             $table->string('nama_obat');
             $table->string('jumlah_tersedia');
             $table->date('expired');
             $table->string('lokasi_simpan');
 
-            $table->primary('id_obat');
+            // $table->primary('id_obat');
             $table->timestamps();
         });
     }
