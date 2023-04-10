@@ -24,3 +24,5 @@ Route::get('/', function () {
 Route::resource('pegawai', pegawaiController::class);
 Route::resource('stocks', StockCRUDController::class);
 Route::resource('inventories', InventoryCRUDController::class);
+Route::resource('resep', resepController::class);
+
