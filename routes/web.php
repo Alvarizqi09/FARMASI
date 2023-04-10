@@ -28,7 +28,6 @@ Route::get('/', function () {
 
 Route::resource('stocks', StockCRUDController::class);
 Route::resource('pegawai', pegawaiController::class);
-Route::resource('stocks', StockCRUDController::class);
 Route::resource('inventories', InventoryCRUDController::class);
 Route::resource('supplier', SupplierCRUDController::class);
 Route::resource('apoteker', ApotekerCRUDController::class);
