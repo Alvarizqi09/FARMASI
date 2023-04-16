@@ -8,6 +8,10 @@ use App\Http\Controllers\InventoryCRUDController;
 use App\Http\Controllers\SupplierCRUDController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\DrugController;
+use App\Http\Controllers\TypeDrugController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\BrandController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +39,10 @@ Route::resource('resep', resepController::class);
 Route::resource('inventories', InventoryCRUDController::class);
 Route::resource('pembelian', PembelianController::class);
 Route::resource('Transaksi', TransaksiController::class);
+Route::resource('drugs', DrugController::class);
+Route::resource('types', TypeDrugController::class);
+Route::resource('categories', CategoryController::class);
+Route::resource('brands', BrandController::class);
 
 Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi');
 
