@@ -104,7 +104,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                Data Master
+                Data Obat
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -131,6 +131,12 @@
                 <a href="/brands" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Supplier</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/resep" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Resep Obat</p>
                 </a>
               </li>
               {{-- <li class="nav-item">
@@ -163,17 +169,17 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="/Transaksi" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Penjualan Obat</p>
                 </a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a href="pages/charts/flot.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Pembelian Obat</p>
                 </a>
-              </li>
+              </li> --}}
               {{-- <li class="nav-item">
                 <a href="pages/charts/inline.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
