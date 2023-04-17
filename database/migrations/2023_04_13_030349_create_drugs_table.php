@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('drugs', function (Blueprint $table) {
-            // $table->id();
+            $table->id();
             $table->char('id_obat', 10);
             $table->string('nama_obat', 50);
             $table->string('jenis_obat');
@@ -22,7 +22,11 @@ return new class extends Migration
             $table->string("pemasok");
             $table->date('kadaluwarsa')->nullable();
 
-            $table->primary('id_obat');
+            $table->unsignedBigInteger('kategori');
+            $table->foreign('kategori')->references('id')->on('types')->onDelete('cascade');
+            $table->unsignedBigInteger('kategori_obat');
+            $table->foreign('kategori_obat')->references('id')->on('categories')->onDelete('cascade');
+            // $table->primary('id_obat');  
             $table->timestamps();
         });
     }

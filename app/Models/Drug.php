@@ -20,7 +20,7 @@ class Drug extends Model
         'pemasok',
         'kadaluwarsa'
     ];
-    protected $primaryKey = 'id_obat';
-    public $incrementing = false;
-    public $timestamps = true;
+    // protected $primaryKey = 'id_obat';
+    // public $incrementing = false;
+    // public $timestamps = true;
 }
