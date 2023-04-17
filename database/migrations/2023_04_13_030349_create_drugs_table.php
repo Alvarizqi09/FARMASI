@@ -22,10 +22,10 @@ return new class extends Migration
             $table->string("pemasok");
             $table->date('kadaluwarsa')->nullable();
 
-            // $table->unsignedBigInteger('kategori');
-            // $table->foreign('kategori')->references('id')->on('types')->onDelete('cascade');
-            // $table->unsignedBigInteger('kategori_obat');
-            // $table->foreign('kategori_obat')->references('id')->on('categories')->onDelete('cascade');
+            $table->unsignedBigInteger('kategori');
+            $table->foreign('kategori')->references('id')->on('types')->onDelete('cascade');
+            $table->unsignedBigInteger('kategori_obat');
+            $table->foreign('kategori_obat')->references('id')->on('categories')->onDelete('cascade');
             // $table->primary('id_obat');  
             $table->timestamps();
         });
