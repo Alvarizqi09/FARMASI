@@ -18,7 +18,9 @@ class Drug extends Model
         'kategori_resep',
         'stok_masuk',
         'pemasok',
-        'kadaluwarsa'
+        'kadaluwarsa',
+        'kategori',
+        'kategori_obat',
     ];
     // protected $primaryKey = 'id_obat';
     // public $incrementing = false;
