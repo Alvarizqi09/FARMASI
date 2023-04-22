@@ -40,7 +40,7 @@ Route::resource('inventories', InventoryCRUDController::class);
 Route::resource('pembelian', PembelianController::class);
 Route::resource('Transaksi', TransaksiController::class);
 Route::resource('drugs', DrugController::class);
-Route::resource('types', TypeDrugController::class);
+// Route::resource('types', TypeDrugController::class);
 // Route::resource('categories', CategoryController::class);
 Route::resource('brands', BrandController::class);
 
@@ -70,3 +70,10 @@ Route::post('category.store', [CategoryController::class, 'store'])->name('categ
 Route::post('category.edits', [CategoryController::class, 'edits'])->name('category.edits');
 Route::post('category.updates', [CategoryController::class, 'updates'])->name('category.updates');
 Route::post('category.hapus', [CategoryController::class, 'hapus'])->name('category.hapus');
+
+// crud type
+Route::get('type.index', [TypeDrugController::class, 'index'])->name('type.index');
+Route::post('type.store', [TypeDrugController::class, 'store'])->name('type.store');
+Route::post('type.edits', [TypeDrugController::class, 'edits'])->name('type.edits');
+Route::post('type.updates', [TypeDrugController::class, 'updates'])->name('type.updates');
+Route::post('type.hapus', [TypeDrugController::class, 'hapus'])->name('type.hapus');

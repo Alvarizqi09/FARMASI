@@ -117,7 +117,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/types" class="nav-link">
+                <a href="{{ route('type.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Jenis Obat</p>
                 </a>
