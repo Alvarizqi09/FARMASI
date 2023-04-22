@@ -22,6 +22,7 @@
   <link rel="stylesheet" href={{ asset("dist/css/adminlte.min.css") }}>
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href={{ asset("plugins/overlayScrollbars/css/OverlayScrollbars.min.css") }}>
+  <link rel="stylesheet" href={{ asset("plugins/datatables/datatables.css") }}>
   <!-- Daterange picker -->
   {{-- <link rel="stylesheet" href="{{ asset(plugins/daterangepicker/daterangepicker.css) }}"> --}}
   <!-- summernote -->
@@ -363,5 +364,7 @@
 {{-- <script src={{ asset("dist/js/demo.js") }}></script> --}}
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src={{ asset("dist/js/pages/dashboard.js") }}></script>
+@stack('js')
+<script src={{ asset("plugins/datatables/jquery.dataTables.js") }}></script>
 </body>
 </html>

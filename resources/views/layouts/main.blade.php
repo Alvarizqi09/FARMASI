@@ -22,6 +22,7 @@
   <link rel="stylesheet" href={{ asset("dist/css/adminlte.min.css") }}>
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href={{ asset("plugins/overlayScrollbars/css/OverlayScrollbars.min.css") }}>
+  <link rel="stylesheet" href={{ asset("plugins/datatables/datatables.css") }}>
   <!-- Daterange picker -->
   {{-- <link rel="stylesheet" href="{{ asset(plugins/daterangepicker/daterangepicker.css) }}"> --}}
   <!-- summernote -->
@@ -328,5 +329,7 @@
     });
 </script>
 <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+@stack('js')
+<script src={{ asset("plugins/datatables/jquery.dataTables.js") }}></script>
 </body>
 </html>
