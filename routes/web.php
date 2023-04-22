@@ -41,7 +41,7 @@ Route::resource('pembelian', PembelianController::class);
 Route::resource('Transaksi', TransaksiController::class);
 Route::resource('drugs', DrugController::class);
 Route::resource('types', TypeDrugController::class);
-Route::resource('categories', CategoryController::class);
+// Route::resource('categories', CategoryController::class);
 Route::resource('brands', BrandController::class);
 
 Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi');
@@ -63,3 +63,10 @@ Route::get('/tampilkandata/{id}',[PembelianController::class, 'tampilkandata'])-
 Route::post('/updatedata/{id}',[PembelianController::class, 'updatedata'])->name('updatedata');
 
 Route::get('/delete/{id}',[PembelianController::class, 'delete'])->name('delete');
+
+// crud category
+Route::get('category.index', [CategoryController::class, 'index'])->name('category.index');
+Route::post('category.store', [CategoryController::class, 'store'])->name('category.store');
+Route::post('category.edits', [CategoryController::class, 'edits'])->name('category.edits');
+Route::post('category.updates', [CategoryController::class, 'updates'])->name('category.updates');
+Route::post('category.hapus', [CategoryController::class, 'hapus'])->name('category.hapus');

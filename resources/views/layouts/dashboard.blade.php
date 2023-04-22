@@ -111,7 +111,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/categories" class="nav-link">
+                <a href="{{ route('category.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kategori Obat</p>
                 </a>
