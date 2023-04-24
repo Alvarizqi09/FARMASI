@@ -133,7 +133,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/brands" class="nav-link">
+                <a href="{{  route('brand.index')  }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Supplier</p>
                 </a>
