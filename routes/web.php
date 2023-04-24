@@ -12,6 +12,7 @@ use App\Http\Controllers\DrugController;
 use App\Http\Controllers\TypeDrugController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\SatuanController;
 
 use Illuminate\Support\Facades\Route;
 
