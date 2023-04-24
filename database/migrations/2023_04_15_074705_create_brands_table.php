@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('brands', function (Blueprint $table) {
             $table->id();
-            $table->string("nama_supplier");
-            $table->string("email");
-            $table->string("alamat");
+            $table->string("nama_supplier", 40);
+            $table->string("email", 30);
+            $table->string("telp", 12);
+            $table->string("rekening", 20);
+            $table->string("alamat", 150);
             $table->timestamps();
         });
     }

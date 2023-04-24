@@ -12,6 +12,8 @@ class Brand extends Model
     protected $fillable = [
         'nama_supplier',
         'email',
+        'telp',
+        'rekening',
         'alamat'
     ];
 }

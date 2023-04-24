@@ -42,7 +42,7 @@ Route::resource('Transaksi', TransaksiController::class);
 Route::resource('drugs', DrugController::class);
 // Route::resource('types', TypeDrugController::class);
 // Route::resource('categories', CategoryController::class);
-Route::resource('brands', BrandController::class);
+// Route::resource('brands', BrandController::class);
 
 Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi');
 
@@ -77,3 +77,9 @@ Route::post('type.store', [TypeDrugController::class, 'store'])->name('type.stor
 Route::post('type.edits', [TypeDrugController::class, 'edits'])->name('type.edits');
 Route::post('type.updates', [TypeDrugController::class, 'updates'])->name('type.updates');
 Route::post('type.hapus', [TypeDrugController::class, 'hapus'])->name('type.hapus');
+
+Route::get('brand.index', [BrandController::class, 'index'])->name('brand.index'); 
+Route::post('brand.store', [BrandController::class, 'store'])->name('brand.store');
+Route::post('brand.edits', [BrandController::class, 'edits'])->name('brand.edits');
+Route::post('brand.updates', [BrandController::class, 'updates'])->name('brand.updates');
+Route::post('brand.hapus', [BrandController::class, 'hapus'])->name('brand.hapus');
