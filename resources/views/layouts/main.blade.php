@@ -117,7 +117,7 @@
               <li class="nav-item">
                 <a href="{{ route('obat.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Stok Obat</p>
+                  <p>Katalog Obat</p>
                 </a>
               </li>
               <li class="nav-item">
