@@ -14,6 +14,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\SatuanController;
 use App\Http\Controllers\ObatController;
+use App\Http\Controllers\StockObatController;
 
 
 
@@ -102,3 +103,8 @@ Route::post('obat.store', [ObatController::class, 'store'])->name('obat.store');
 Route::post('obat.edits', [ObatController::class, 'edits'])->name('obat.edits');
 Route::post('obat.updates', [ObatController::class, 'updates'])->name('obat.updates');
 Route::post('obat.hapus', [ObatController::class, 'hapus'])->name('obat.hapus');
+
+// crud katalog obat
+Route::get('stocks.index', [StockObatController::class, 'index'])->name('stocks.index');
+Route::post('stocks.store', [StockObatController::class, 'store'])->name('stocks.store');
+Route::post('getObat', [StockObatController::class, 'getObat'])->name('getObat');

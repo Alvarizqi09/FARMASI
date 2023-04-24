@@ -115,6 +115,12 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
+                <a href="{{ route('stocks.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Stok Obat</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{ route('obat.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Katalog Obat</p>
@@ -312,6 +318,7 @@
 <script src={{ asset("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js") }}></script>
 <!-- AdminLTE App -->
 <script src={{ asset("dist/js/adminlte.js") }}></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 {{-- <script src={{ asset("dist/js/demo.js") }}></script> --}}
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
