@@ -13,6 +13,8 @@ use App\Http\Controllers\TypeDrugController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\SatuanController;
+use App\Http\Controllers\ObatController;
+
 
 
 use Illuminate\Support\Facades\Route;
@@ -80,14 +82,23 @@ Route::post('type.edits', [TypeDrugController::class, 'edits'])->name('type.edit
 Route::post('type.updates', [TypeDrugController::class, 'updates'])->name('type.updates');
 Route::post('type.hapus', [TypeDrugController::class, 'hapus'])->name('type.hapus');
 
+// crud supplier
 Route::get('brand.index', [BrandController::class, 'index'])->name('brand.index'); 
 Route::post('brand.store', [BrandController::class, 'store'])->name('brand.store');
 Route::post('brand.edits', [BrandController::class, 'edits'])->name('brand.edits');
 Route::post('brand.updates', [BrandController::class, 'updates'])->name('brand.updates');
 Route::post('brand.hapus', [BrandController::class, 'hapus'])->name('brand.hapus');
 
+// crud satuan
 Route::get('satuan.index', [SatuanController::class, 'index'])->name('satuan.index');
 Route::post('satuan.store', [SatuanController::class, 'store'])->name('satuan.store');
 Route::post('satuan.edits', [SatuanController::class, 'edits'])->name('satuan.edits');
 Route::post('satuan.updates', [SatuanController::class, 'updates'])->name('satuan.updates');
 Route::post('satuan.hapus', [SatuanController::class, 'hapus'])->name('satuan.hapus');
+
+// crud obat
+Route::get('obat.index', [ObatController::class, 'index'])->name('obat.index');
+Route::post('obat.store', [ObatController::class, 'store'])->name('obat.store');
+Route::post('obat.edits', [ObatController::class, 'edits'])->name('obat.edits');
+Route::post('obat.updates', [ObatController::class, 'updates'])->name('obat.updates');
+Route::post('obat.hapus', [ObatController::class, 'hapus'])->name('obat.hapus');
