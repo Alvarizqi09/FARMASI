@@ -83,3 +83,9 @@ Route::post('brand.store', [BrandController::class, 'store'])->name('brand.store
 Route::post('brand.edits', [BrandController::class, 'edits'])->name('brand.edits');
 Route::post('brand.updates', [BrandController::class, 'updates'])->name('brand.updates');
 Route::post('brand.hapus', [BrandController::class, 'hapus'])->name('brand.hapus');
+
+Route::get('satuan.index', [SatuanController::class, 'index'])->name('satuan.index');
+Route::post('satuan.store', [SatuanController::class, 'store'])->name('satuan.store');
+Route::post('satuan.edits', [SatuanController::class, 'edits'])->name('satuan.edits');
+Route::post('satuan.updates', [SatuanController::class, 'updates'])->name('satuan.updates');
+Route::post('satuan.hapus', [SatuanController::class, 'hapus'])->name('satuan.hapus');
