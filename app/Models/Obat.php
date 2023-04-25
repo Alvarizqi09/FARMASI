@@ -17,7 +17,8 @@ class Obat extends Model
         'dosis',
         'kategori',
         'kategori_obat',
-        'satuan'
+        'satuan',
+        'ready',
     ];
 
     public static function join() 
