@@ -278,6 +278,7 @@
                     let newOption = new Option(res.namaObat, res.idObat, true, true)
                         $('#id').val(res.id)
                         $('#obat').append(newOption).trigger('change')
+                        $('#obat').prop('disabled', true)
                         $('#beli').val(res.beli)
                         $('#jual').val(res.jual)
                         $('#stockLama').val(res.stock)
