@@ -29,17 +29,17 @@ class StockObatController extends Controller
 
     public function store(Request $request) 
     {
-//   "obat" => "1"
-//   "stockLama" => "0"
-//   "id" => null
-//   "masuk" => "10"
-//   "keluar" => "0"
-//   "stock" => "10"
-//   "beli" => "1"
-//   "jual" => "2"
-//   "tanggal_masuk" => "2023/04/25"
-//   "kadaluwarsa" => "2025/07/16"
-//   "keterangan" => "Faktur Pembelian Nomor 1"
+        //   "obat" => "1"
+        //   "stockLama" => "0"
+        //   "id" => null
+        //   "masuk" => "10"
+        //   "keluar" => "0"
+        //   "stock" => "10"
+        //   "beli" => "1"
+        //   "jual" => "2"
+        //   "tanggal_masuk" => "2023/04/25"
+        //   "kadaluwarsa" => "2025/07/16"
+        //   "keterangan" => "Faktur Pembelian Nomor 1"
 
 
         $data = new stockObat();
@@ -76,4 +76,63 @@ class StockObatController extends Controller
             return response()->json(['data' => $null]);
         }
     }
+
+    public function edits(Request $request)
+    {
+        $id = $request->id;
+        $data = stockObat::join()
+            ->where('stock_obats.id', $id)
+            ->first();
+        return response()->json($data);
+    }
+
+    public function updates(Request $request)
+    {
+        // "obat" => "3"
+        // "stockLama" => "110"
+        // "id" => "3"
+        // "masuk" => "15"
+        // "keluar" => "0"
+        // "stock" => "125"
+        // "beli" => "1500.00"
+        // "jual" => "3000.00"
+        // "tanggal_masuk" => "2023-04-07"
+        // "kadaluwarsa" => "2025-12-12"
+        // "keterangan" => "Faktur Pembelian tidak ada"
+
+        $datas = [
+            'idObat' => $request->obat,
+            'masuk' => $request->masuk,
+            'keluar' => $request->keluar,
+            'jual' => $request->jual,
+            'beli' => $request->beli,
+            'stock' => $request->stock,
+            'tanggal_masuk' => $request->tanggal_masuk,
+            'kadaluwarsa' => $request->kadaluwarsa,
+            'keterangan' => $request->keterangan,
+        ];
+
+        $data = stockObat::find($request->id);
+        $simpan = $data->update($datas);
+        if ($simpan) {
+            return response()->json(['text'=>'Data berhasil disimpan'], 200);
+        } 
+        else {
+            return response()->json(['text'=>'Data gagal disimapn'], 400);
+        }
+    }
+    
+
+    public function hapus(Request $request) 
+    {
+        $data = stockObata::find($request->id);
+        $simpan = $data->delete();
+        if ($simpan) {
+            return response()->json(['text'=>'Data berhasil dihapus'], 200);
+        } 
+        else {
+            return response()->json(['text'=>'Data gagal dihapus'], 400);
+        }
+    }
+
 }

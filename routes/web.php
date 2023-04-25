@@ -108,3 +108,5 @@ Route::post('obat.hapus', [ObatController::class, 'hapus'])->name('obat.hapus');
 Route::get('stocks.index', [StockObatController::class, 'index'])->name('stocks.index');
 Route::post('stocks.store', [StockObatController::class, 'store'])->name('stocks.store');
 Route::post('getObat', [StockObatController::class, 'getObat'])->name('getObat');
+Route::post('/stock.edits', [StockObatController::class, 'edits'])->name('stock.edits');
+Route::post('stock.updates', [StockObatController::class, 'updates'])->name('stock.updates');

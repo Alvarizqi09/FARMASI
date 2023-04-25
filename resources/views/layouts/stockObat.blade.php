@@ -196,6 +196,7 @@
                     console.log(res);
                     $('#btn-tutup').click()
                     $('#tabel').DataTable().ajax.reload()
+                    $('#forms')[0].reset();
                     toastr.success(res.text, 'Sukses')
                 },
                 error : function (xhr) {
@@ -250,6 +251,44 @@
             let keluar = parseInt($('#keluar').val())
             let akhir = (awal + masuk) - keluar
             $('#stock').val(akhir)
+        })
+
+        // edit
+        $(document).on('click', '.edit', function () {
+            $('#forms').attr('action', "{{ route('stock.updates') }}")
+            $('#btn-tambah').click()
+            let id = $(this).attr('id')
+
+            // $.ajaxSetup({
+            //     headers: {
+            //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            //     }
+            // });
+            // var token = "{{csrf_token()}}"
+            
+            $.ajax({
+                url : "{{ route('stock.edits') }}",
+                type : 'post',
+                data : {
+                    id : id,
+                    _token : "{{ csrf_token() }}"
+                }, 
+                success : function (res) {
+                    console.log(res)
+                    let newOption = new Option(res.namaObat, res.idObat, true, true)
+                        $('#id').val(res.id)
+                        $('#obat').append(newOption).trigger('change')
+                        $('#beli').val(res.beli)
+                        $('#jual').val(res.jual)
+                        $('#stockLama').val(res.stock)
+                        $('#tanggal_masuk').val(res.tanggal_masuk)
+                        $('#kadaluwarsa').val(res.kadaluwarsa)
+                        $('#keterangan').val(res.keterangan)
+                }, 
+                error : function (xhr) {
+                    console.log(xhr)
+                }
+            })
         })
         
 

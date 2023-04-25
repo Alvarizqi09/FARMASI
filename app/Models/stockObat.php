@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class stockObat extends Model
 {
     use HasFactory;
-    protected $fillabke = [
+    protected $fillable = [
         'idObat',
         'masuk',
         'keluar',
