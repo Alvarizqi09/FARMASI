@@ -18,7 +18,7 @@ class StockObatController extends Controller
             return datatables()->of($stock)
                 ->addColumn('action', function ($stock) {
                     $button = '<button class="edit btn btn-warning" id="' . $stock->id .'" name="edit">Edit</button>';
-                    $button .= '<button class="edit btn btn-warning" id="' . $stock->id .'" name="hapus">Hapus</button>';
+                    $button .= '<button class="edit btn btn-danger" id="' . $stock->id .'" name="hapus">Hapus</button>';
                     return $button;
                 })
                 ->rawColumns(['action'])
@@ -29,8 +29,21 @@ class StockObatController extends Controller
 
     public function store(Request $request) 
     {
+//   "obat" => "1"
+//   "stockLama" => "0"
+//   "id" => null
+//   "masuk" => "10"
+//   "keluar" => "0"
+//   "stock" => "10"
+//   "beli" => "1"
+//   "jual" => "2"
+//   "tanggal_masuk" => "2023/04/25"
+//   "kadaluwarsa" => "2025/07/16"
+//   "keterangan" => "Faktur Pembelian Nomor 1"
+
+
         $data = new stockObat();
-        $data->idObat = $request->nama_obat;
+        $data->idObat = $request->obat;
         $data->masuk = $request->masuk;
         $data->keluar = $request->keluar;
         $data->beli = $request->beli;

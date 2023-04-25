@@ -47,8 +47,9 @@
             <div class="modal-body">
               {{-- isian --}}
               <form action="/stocks.store" method="POST" id="forms">
-                <meta name="csrf-token" content="{{ csrf_token() }}">
-                @method('POST')
+                @csrf
+                {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
+                {{-- @method('POST') --}}
                 <div class="form-group">
                     <label class="mr-sm-2" for="exampleInputEmail1">Nama Obat</label>
                     <select class="custom-select mr-sm-2 js-example-basic-single form-control form-control" name="obat" id="obat">
@@ -59,7 +60,7 @@
                     </select>
                 </div>
                 <div>
-                    STOCK OBAT
+                    JUMLAH STOK
                     <hr style="border: 1px solid red">
                 </div>
                 <div class="row">
@@ -73,23 +74,23 @@
 
                     <div class="form-group col-md-4">
                         <label for="exampleInputEmail1">Stok Masuk</label>
-                        <input type="text" class="form-control" onkeypress="return number(event)" autocomplete="off" 
+                        <input type="text" class="form-control" autocomplete="off" 
                             id="masuk" name="masuk" value="0" class="form-control">
                     </div>
 
                     <div class="form-group col-md-4">
                         <label for="exampleInputEmail1">Stok Keluar</label>
-                        <input type="text" class="form-control" onkeypress="return number(event)" autocomplete="off" 
+                        <input type="text" class="form-control" autocomplete="off" 
                             id="keluar" name="keluar" value="0" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Stok Akhir</label>
-                    <input type="text" class="form-control" readonly onkeypress="return number(event)" autocomplete="off" 
+                    <input type="text" class="form-control" readonly autocomplete="off" 
                         id="stock" name="stock" class="form-control">
                 </div>
                 <div>
-                    STOCK OBAT
+                    STOK OBAT
                     <hr style="border: 1px solid red">
                 </div>
                 <div class="form-group">
@@ -146,6 +147,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <script src=""></script>
     <script>
 
         $(document).ready(function () {
@@ -202,29 +204,29 @@
             })
         })
 
-        function number(evt) {
-            var charCode = (evt.which) ? evt.which : event.keyCode
-            if (charCode > 31 && (charCode < 48 || charCode > 57))
-                return false;
-            return true;
-        }
+        // function number(evt) {
+        //     var charCode = (evt.which) ? evt.which : event.keyCode
+        //     if (charCode > 31 && (charCode < 48 || charCode > 57))
+        //         return false;
+        //     return true;
+        // }
 
         $(document).on('change', '#obat', function () {
             let id = $(this).val()
 
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            var token = "{{csrf_token()}}"
+            // $.ajaxSetup({
+            //     headers: {
+            //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            //     }
+            // });
+            // var token = "{{csrf_token()}}"
 
             $.ajax({
                 url : "{{ route('getObat') }}",
                 type : "post",
                 data : {
                     id : id,
-                    _token : token
+                    _token : "{{ csrf_token() }}"
                 }, success : function (res) {
                     $('#stockLama').val(res.data.stock)
                     console.log(res);
