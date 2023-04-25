@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nama_obat', 30);
             $table->string('efek_samping', 50);
             $table->string('dosis', 10);
+            $table->string('ready')->default('N');
 
             $table->unsignedBigInteger('kategori');
             $table->foreign('kategori')->references('id')->on('types')->onDelete('cascade');
