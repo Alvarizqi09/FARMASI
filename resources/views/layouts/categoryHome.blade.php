@@ -104,6 +104,7 @@
                 console.log(res);
                 $('#btn-tutup').click()
                 $('#tabel').DataTable().ajax.reload()
+                $('#forms')[0].reset();
                 toastr.success(res.text, 'Sukses')
             }, 
             error : function (xhr) {
