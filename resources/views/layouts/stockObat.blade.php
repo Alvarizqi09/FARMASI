@@ -290,6 +290,52 @@
                 }
             })
         })
+
+        $(document).on('click', '.hapus', function () {
+        let id = $(this).attr('id')
+        Swal.fire({
+            title: 'Apakah kamu yakin?',
+            text: "Kamu tidak bisa mengembalikannya lagi nanti!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, hapus!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url : "{{ route('stock.hapus') }}",
+                        type : 'post',
+                        data : {
+                            id : id,
+                            _token : "{{ csrf_token() }}"
+                        },
+                        success: function (res, status) {
+                            if (status = '200') {
+                                setTimeout(() => {
+                                    Swal.fire({
+                                        position: 'center-center',
+                                        icon: 'success',
+                                        title: 'Data berhasil dihapus',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                        }).then((res) => {
+                                            $('#tabel').DataTable().ajax.reload()
+                                        })
+                                });
+                            }
+                        },
+                        error: function (xhr) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Gagal menghapus!',
+                            })
+                        }
+                    })
+                }
+            })
+    })
         
 
             

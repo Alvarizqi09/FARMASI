@@ -18,7 +18,7 @@ class StockObatController extends Controller
             return datatables()->of($stock)
                 ->addColumn('action', function ($stock) {
                     $button = '<button class="edit btn btn-warning" id="' . $stock->id .'" name="edit">Edit</button>';
-                    $button .= '<button class="edit btn btn-danger" id="' . $stock->id .'" name="hapus">Hapus</button>';
+                    $button .= '<button class="hapus btn btn-danger" id="' . $stock->id .'" name="hapus">Hapus</button>';
                     return $button;
                 })
                 ->rawColumns(['action'])
