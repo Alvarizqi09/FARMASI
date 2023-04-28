@@ -26,6 +26,7 @@
   <link rel="stylesheet" href={{ asset("plugins/datatables/datatables.css") }}>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 
   <!-- Daterange picker -->
   {{-- <link rel="stylesheet" href="{{ asset(plugins/daterangepicker/daterangepicker.css) }}"> --}}
@@ -174,7 +175,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/Transaksi" class="nav-link">
+                <a href="{{ route('penjualan.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Penjualan Obat</p>
                 </a>
