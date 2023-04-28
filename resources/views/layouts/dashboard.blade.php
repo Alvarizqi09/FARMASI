@@ -383,5 +383,6 @@
 <script src={{ asset("dist/js/pages/dashboard.js") }}></script>
 @stack('js')
 <script src={{ asset("plugins/datatables/jquery.dataTables.js") }}></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
 </body>
 </html>

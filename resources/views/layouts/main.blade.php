@@ -348,5 +348,6 @@
 <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
 @stack('js')
 <script src={{ asset("plugins/datatables/jquery.dataTables.js") }}></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
 </body>
 </html>
