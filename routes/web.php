@@ -15,6 +15,8 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\SatuanController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\StockObatController;
+use App\Http\Controllers\PasienController;
+use App\Http\Controllers\JualansController;
 
 
 
