@@ -135,4 +135,28 @@ class StockObatController extends Controller
         }
     }
 
+    public function getDataObat(Request $request)
+    {
+         
+        $data = stockObat::where('idObat', $request->id)->first();
+        return response()->json($data);
+    
+    }
+
+    private function data(array $data)
+    {
+        $data = [
+            'idObat' => $data['obat'],
+            'masuk' => $data['masuk'],
+            'keluar' => $data['keluar'],
+            'jual' => $data['jual'],
+            'beli' => $data['beli'],
+            'stock' => $data['stock'],
+            'tanggal_masuk' => $data['tanggal_masuk'],
+            'kadaluwarsa' => $data['kadaluwarsa'],
+            'keterangan' => $data['keterangan'],
+        ];
+        return $data;
+    }
+
 }
