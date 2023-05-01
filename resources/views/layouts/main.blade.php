@@ -145,12 +145,12 @@
                   <p>Satuan Obat</p>
                 </a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a href="{{  route('brand.index')  }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Supplier</p>
                 </a>
-              </li>
+              </li> --}}
               {{-- <li class="nav-item">
                 <a href="/resep" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -177,6 +177,25 @@
               </li> --}}
             </ul>
           </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-truck" aria-hidden="true"></i>
+              <p>
+                Supplier Obat
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('brand.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Supplier</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
