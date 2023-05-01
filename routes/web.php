@@ -119,3 +119,10 @@ Route::get('penjualan.index', [JualansController::class, 'index'])->name('penjua
 Route::post('getDataObat', [StockObatController::class, 'getDataObat'])->name('getDataObat'); 
 Route::post('jualan.store', [JualansController::class, 'store'])->name('jualan.store'); 
 Route::get('jualans.dataTable',[JualansController::class, 'dataTable'])->name('jualans.dataTable');
+
+//crud pengaduan
+Route::get('pengaduan.index', [PengaduanController::class, 'index'])->name('pengaduan.index');
+Route::post('pengaduan.store', [PengaduanController::class, 'store'])->name('pengaduan.store');
+Route::post('pengaduan.edits', [PengaduanController::class, 'edits'])->name('pengaduan.edits');
+Route::post('pengaduan.updates', [PengaduanController::class, 'updates'])->name('pengaduan.updates');
+Route::post('pengaduan.hapus', [PengaduanController::class, 'hapus'])->name('pengaduan.hapus');
