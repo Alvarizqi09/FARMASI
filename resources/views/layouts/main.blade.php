@@ -151,12 +151,12 @@
                   <p>Data Supplier</p>
                 </a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a href="/resep" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Resep Obat</p>
                 </a>
-              </li>
+              </li> --}}
               {{-- <li class="nav-item">
                 <a href="pages/layout/fixed-topnav.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
