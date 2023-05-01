@@ -199,32 +199,6 @@ $(document).on('click', '.edit', function () {
     })
 })
 
-// $(document).on('click', '.show', function() {
-//     let id = $(this).attr('id')
-//     $.ajax({
-//         url : "{{ route('pengaduan.show') }}",
-//         type : 'get',
-//         data : {
-//             id : id,
-//             _token : "{{ csrf_token() }}"
-//         }, 
-//         success : function (res) {
-//             console.log(res);
-//             $('#id').val(res.id)
-//             $('#namaPengadu').val(res.namaPengadu)
-//             $('#usia').val(res.usia)
-//             $('#gender').val(res.gender)
-//             $('#telp').val(res.telp)
-//             $('#alamat').val(res.alamat)
-//             $('#tgl').val(res.tgl)
-//             $('#bagianKeluhan').val(res.bagianKeluhan)
-//             $('#keluhan').val(res.keluhan)
-//         },
-//         error : function (xhr) {
-//             console.log(xhr);
-//         }
-//     })
-// })
 
 
 $(document).on('click', '.hapus', function () {
