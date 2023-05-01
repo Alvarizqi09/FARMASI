@@ -115,12 +115,12 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a href="{{ route('stocks.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Stok Obat</p>
                 </a>
-              </li>
+              </li> --}}
               <li class="nav-item">
                 <a href="{{ route('obat.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -175,6 +175,24 @@
                   <p>Collapsed Sidebar</p>
                 </a>
               </li> --}}
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-medkit" aria-hidden="true"></i>
+              <p>
+                Data Stok
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('stocks.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Stok Obat</p>
+                </a>
+              </li>
             </ul>
           </li>
 
