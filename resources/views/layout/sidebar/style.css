@@ -61,6 +61,7 @@ body {
 .sidebar .header .list-item .sistem-farmasi {
   font-style: normal;
   font-weight: 700;
+  /* font-size: 19px; */
   font-size: 21px;
   line-height: 42px;
   text-align: center;
@@ -78,6 +79,7 @@ body {
   padding: 15px 40px 15px 40px;
   border-top: 1px outset #1a1a1a;
   border-bottom: 1px outset #1a1a1a;
+  /* margin: 0px 10px; */
 }
 
 .sidebar .header .logo img {
@@ -234,10 +236,60 @@ body {
   transform: translateY(-50%);
 }
 
+.sidebar .profile-details {
+  position: fixed;
+  bottom: 0;
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: #fcf9ec; */
+  padding: 12px 0;
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
+}
+.sidebar.close .profile-details {
+  background: none;
+}
+.sidebar.close .profile-details {
+  width: 78px;
+}
+.sidebar .profile-details .profile-content {
+  display: flex;
+  align-items: center;
+}
+.sidebar .profile-details img {
+  height: 52px;
+  width: 52px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0 14px 0 12px;
+  /* background: #1a1a1a; */
+  transition: all 0.5s ease;
+}
+.sidebar.close .profile-details img {
+  padding: 10px;
+}
+.sidebar .profile-details .profile_name,
+.sidebar .profile-details .job {
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.sidebar.close .profile-details i,
+.sidebar.close .profile-details .profile_name,
+.sidebar.close .profile-details .job {
+  display: none;
+}
+.sidebar .profile-details .job {
+  font-size: 12px;
+}
+
 .home-section {
   position: relative;
-  background: #ffffff;
-  height: 100vh;
+  background-color: #ffffff;
+  min-height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
@@ -278,6 +330,15 @@ body {
   .sidebar.close {
     width: 78px;
   }
+  .sidebar .profile-details {
+    width: 240px;
+  }
+  .sidebar.close .profile-details {
+    background: none;
+  }
+  .sidebar.close .profile-details {
+    width: 78px;
+  }
   .home-section {
     left: 240px;
     width: calc(100% - 240px);
@@ -288,7 +349,19 @@ body {
   }
 }
 
+.home-section .main-content {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem; /* Footer height */
+  padding-left: 10px;
+  color: #1a1a1a;
+}
+
 #footer {
+  font-size: 13px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
   flex-shrink: none;
   clear: both;
 }
