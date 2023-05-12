@@ -51,10 +51,10 @@
             <li>
               <a class="link_name" href="#"> <b>Data Obat</b> </a>
             </li>
-            <li><a href="#">Katalog Obat</a></li>
+            <li><a href="{{ rout('obat.index') }}">Katalog Obat</a></li>
             <li><a href="{{ route('type.index') }}">Jenis Obat</a></li>
-            <li><a href="#">Kategori Obat</a></li>
-            <li><a href="#">Satuan Obat</a></li>
+            <li><a href="{{ route('category.index') }}">Kategori Obat</a></li>
+            <li><a href="{{ route('satuan.index') }}">Satuan Obat</a></li>
           </ul>
         </li>
         <li>
@@ -67,7 +67,7 @@
           </div>
           <ul class="sub-menu">
             <li>
-              <a class="link_name" href="#"> <b>Data Stok</b> </a>
+              <a class="link_name" href="{{ route('stocks.index') }}"> <b>Data Stok</b> </a>
             </li>
             <li><a href="#">Stok Obat</a></li>
           </ul>
@@ -84,7 +84,7 @@
             <li>
               <a class="link_name" href="#"> <b>Supplier Obat</b> </a>
             </li>
-            <li><a href="#">Data Supplier</a></li>
+            <li><a href="{{ route('brand.index') }}">Data Supplier</a></li>
           </ul>
         </li>
         <li>
@@ -99,7 +99,7 @@
             <li>
               <a class="link_name" href="#"> <b>Transaksi</b> </a>
             </li>
-            <li><a href="#">Penjualan Obat</a></li>
+            <li><a href="{{ route('penjualan.index') }}">Penjualan Obat</a></li>
           </ul>
         </li>
         <li>
@@ -114,7 +114,7 @@
             <li>
               <a class="link_name" href="#"> <b>Pengaduan</b> </a>
             </li>
-            <li><a href="#">Data Pengaduan</a></li>
+            <li><a href="{{ route('pengaduan.index') }}">Data Pengaduan</a></li>
           </ul>
         </li>
         <li>
