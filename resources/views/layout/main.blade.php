@@ -14,6 +14,17 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href={{ asset("dist/css/adminlte.min.css") }} />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <link id="bsdp-css" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <style>
+      .input {
+        font-size: 14px;
+        color: gray;
+        padding: 10px 10px;
+        border-radius: 4px;
+      }
+    </style>
   </head>
   <body class="d-flex flex-column">
     <div class="sidebar close">
@@ -180,6 +191,30 @@
     <script src={{ asset("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js") }}></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src={{ asset("dist/js/pages/dashboard.js") }}></script>
+    <script type="text/javascript">
+      $(function () {
+          $('#datetimepicker1').datepicker({
+              format: "yyyy/mm/dd",
+              weekStart: 0,
+              calendarWeeks: true,
+              autoclose: true,
+              todayHighlight: true, 
+              orientation: "auto"
+          });
+      });
+      $(function () {
+          $('#datetimepicker2').datepicker({
+              format: "yyyy/mm/dd",
+              weekStart: 0,
+              calendarWeeks: true,
+              autoclose: true,
+              todayHighlight: true, 
+              orientation: "auto"
+          });
+      });
+  </script>
+  <script src="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+  
     @stack('js')
     <script src={{ asset("plugins/datatables/jquery.dataTables.js") }}></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
