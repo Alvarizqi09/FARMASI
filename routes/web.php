@@ -35,7 +35,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.dashboard');
+    return view('layout.main');
 });
 
 Route::resource('stocks', StockCRUDController::class);
