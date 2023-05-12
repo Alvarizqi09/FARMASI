@@ -51,7 +51,7 @@
             <li>
               <a class="link_name" href="#"> <b>Data Obat</b> </a>
             </li>
-            <li><a href="{{ rout('obat.index') }}">Katalog Obat</a></li>
+            <li><a href="{{ route('obat.index') }}">Katalog Obat</a></li>
             <li><a href="{{ route('type.index') }}">Jenis Obat</a></li>
             <li><a href="{{ route('category.index') }}">Kategori Obat</a></li>
             <li><a href="{{ route('satuan.index') }}">Satuan Obat</a></li>
