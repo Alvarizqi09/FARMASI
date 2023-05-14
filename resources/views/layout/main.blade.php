@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href={{ asset("dist/css/adminlte.min.css") }} />
+    {{-- <link rel="stylesheet" href={{ asset("dist/css/adminlte.min.css") }} /> --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <link id="bsdp-css" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css" rel="stylesheet">
@@ -190,7 +190,8 @@
     <script src={{ asset("plugins/bootstrap/js/bootstrap.bundle.min.js") }}></script>
     <script src={{ asset("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js") }}></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src={{ asset("dist/js/pages/dashboard.js") }}></script>
+    <script src={{ asset("dist/js/adminlte.js") }}></script>
+    {{-- <script src={{ asset("dist/js/pages/dashboard.js") }}></script> --}}
     <script type="text/javascript">
       $(function () {
           $('#datetimepicker1').datepicker({
