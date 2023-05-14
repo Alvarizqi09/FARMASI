@@ -51,7 +51,8 @@ Route::resource('drugs', DrugController::class);
 // Route::resource('types', TypeDrugController::class);
 // Route::resource('categories', CategoryController::class);
 // Route::resource('brands', BrandController::class);
-
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/loginproses', [LoginController::class, 'login_proses'])->name('loginproses');
 Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi');
 
 Route::get('/tambahtransaksi', [TransaksiController::class, 'tambahtransaksi'])->name('tambahtransaksi');
