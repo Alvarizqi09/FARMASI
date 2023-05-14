@@ -67,9 +67,9 @@
           </div>
           <ul class="sub-menu">
             <li>
-              <a class="link_name" href="{{ route('stocks.index') }}"> <b>Data Stok</b> </a>
+              <a class="link_name" href="#"> <b>Data Stok</b> </a>
             </li>
-            <li><a href="#">Stok Obat</a></li>
+            <li><a href="{{ route('stocks.index') }}">Stok Obat</a></li>
           </ul>
         </li>
         <li>
