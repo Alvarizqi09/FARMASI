@@ -18,6 +18,7 @@ use App\Http\Controllers\StockObatController;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\JualansController;
 use App\Http\Controllers\PengaduanController;
+use App\Http\Controllers\LoginController;
 
 
 
