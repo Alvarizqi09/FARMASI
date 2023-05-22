@@ -9,7 +9,7 @@
 }
 
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100%;
 }
 
@@ -364,4 +364,8 @@ body {
   height: 2.5rem;
   flex-shrink: none;
   clear: both;
+}
+
+div.toast {
+  background-color: green;
 }
