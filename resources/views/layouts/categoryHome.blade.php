@@ -68,6 +68,7 @@
     <script>
     $(document).ready(function () {
         loaddata()
+        // toastr.info('Are you the 6 fingered man?');
     })
 
     function loaddata() {
