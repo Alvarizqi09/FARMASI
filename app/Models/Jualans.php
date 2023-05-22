@@ -29,7 +29,10 @@ class Jualans extends Model
             ->join('obats', 'obats.id', '=', 'jualans.item')
             ->join('pasiens', 'pasiens.id', '=', 'jualans.consumer')
             ->join('stock_obats', 'stock_obats.idObat', '=', 'obats.id')
-            ->select('jualans.*', 'obats.nama_obat as nama_Obat', 'stock_obats.jual', 'pasiens.nama_pasien as customer');
+            ->select('jualans.*', 
+            'obats.nama_obat as nama_obat', 
+            'stock_obats.jual', 
+            'pasiens.nama_pasien as customer');
     }
 
     // public static function joinPasien()
