@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
+use Illuminate\Http\Auth;
 
 class LoginController extends Controller{
     public function index(){
