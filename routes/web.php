@@ -119,10 +119,11 @@ Route::post('stock.updates', [StockObatController::class, 'updates'])->name('sto
 Route::post('stock.hapus', [StockObatController::class, 'hapus'])->name('stock.hapus');
 
 // crud penjualan
-Route::get('jualans.index', [JualansController::class, 'index'])->name('jualans.index'); 
+Route::resource('jualans', JualansController::class);
 Route::post('getDataObat', [StockObatController::class, 'getDataObat'])->name('getDataObat'); 
 Route::post('jualan.store', [JualansController::class, 'store'])->name('jualan.store'); 
-Route::get('jualans.dataTable',[JualansController::class, 'dataTable'])->name('jualans.dataTable');
+Route::get('jualans.home', [ JualansController::class, 'tampilkan'])->name('jualans.home');
+Route::post('jualans.hapus', [JualansController::class, 'hapus'])->name('jualans.hapus');
 
 //crud pengaduan
 Route::get('pengaduan.index', [PengaduanController::class, 'index'])->name('pengaduan.index');
