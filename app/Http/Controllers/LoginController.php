@@ -1,11 +1,10 @@
-<?php
+<?php namespace App\Http\Controllers;
 
-namespace App\Http\Controllers;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Response;
-use Illuminate\View\View;
-use Illuminate\Http\Auth;
+
 
 class LoginController extends Controller{
     public function index(){
@@ -22,8 +21,9 @@ class LoginController extends Controller{
             'password' => $request->password,
         ];
 
-        if(Auth::attempt($data)){
-            return redirect()->route('layout.main');
+        if(Auth::attempt($data))
+        {
+            return redirect::intended('resources/views/layout/main.blade.php');
         }else{
             return redirect()->route('login')->with('failed','email atau password salah');
         }
