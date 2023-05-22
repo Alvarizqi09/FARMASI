@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layouts.main')
 
 @section('content')
     <x-slot name="header">
@@ -228,7 +228,7 @@
                                         title: 'Data berhasil dihapus',
                                         showConfirmButton: false,
                                         timer: 1500
-                                        }).then((res) => {
+                                    }).then((res) => {
                                             $('#tabel').DataTable().ajax.reload()
                                         })
                                 });
