@@ -60,13 +60,13 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a href="#">
+        <a href="{{route('login')}}">
           <i class="bx bx-home-alt"></i>
           <span class="link_name"> <b>Home</b> </span>
         </a>
         <ul class="sub-menu blank">
           <li>
-            <a class="link_name" href="#"> <b>Home</b> </a>
+            <a class="link_name" href="{{route('login)}}"> <b>Home</b> </a>
           </li>
         </ul>
       </li>
