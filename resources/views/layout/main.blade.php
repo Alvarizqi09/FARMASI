@@ -131,8 +131,8 @@
             <a class="link_name" href="#"> <b>Transaksi</b> </a>
           </li>
           <li><a href="/jualans">Tambah Penjualan</a></li>
-          {{-- <li><a href="{{ route('jualans.home') }}">Laporan Penjualan</a></li>
-          <li><a href="/pembelians">Pembelian Obat</a></li> --}}
+          <li><a href="{{ route('jualans.home') }}">Laporan Penjualan</a></li>
+          {{-- <li><a href="/pembelians">Pembelian Obat</a></li> --}}
         </ul>
       </li>
       <li>
