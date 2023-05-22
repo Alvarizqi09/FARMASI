@@ -1,5 +1,9 @@
 @extends('layout.main')
 
+@push('css')
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+@endpush
+
 @section('content')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -69,7 +73,7 @@
                 @csrf
                 {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
                 @method('POST')
-                <div class="form-group">
+                <div class="form-group my-2">
                     <label class="mr-sm-2" for="exampleInputEmail1">Nama Obat</label>
                     <select class="custom-select mr-sm-2 js-example-basic-single form-control form-control" name="obat" id="obat">
                         <option value="">Pilih Obat</option>
@@ -78,6 +82,7 @@
                         @endforeach
                     </select>
                 </div>
+                <hr style="border: 1px solid red">
                 <div>
                     STOCK OBAT
                     <hr style="border: 1px solid red">
@@ -108,8 +113,9 @@
                     <input type="text" class="form-control" readonly autocomplete="off" 
                         id="stock" name="stock" class="form-control">
                 </div>
+                <hr style="border: 1px solid red">
                 <div>
-                    STOCK OBAT
+                    DETAIL OBAT
                     <hr style="border: 1px solid red">
                 </div>
                 <div class="form-group">
@@ -170,13 +176,16 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer></script>
     <script src=""></script>
     <script>
 
         $(document).ready(function () {
             loadData()
-            $('#obat').select2();
+            $('#obat').select2({
+                dropdownParent: $('#modal-info')
+            })
         })
 
         function loadData() {
