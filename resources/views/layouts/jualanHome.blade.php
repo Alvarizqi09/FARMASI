@@ -3,6 +3,7 @@
 @push('css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />  
     {{-- <link rel="stylesheet" href={{ asset("plugins/overlayScrollbars/css/OverlayScrollbars.min.css") }}> --}}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 @endpush
 {{-- @stack('css') --}}
 
@@ -188,13 +189,13 @@
 </div>
 @stack('js')
     {{-- <script src={{ asset("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js") }}></script> --}}
-    {{-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> --}}
     {{-- <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" defer></script> --}}
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
     {{-- <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js" defer></script> --}}
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer></script>
     {{-- <script src={{ asset("plugins/datatables/jquery.dataTables.js") }}></script> --}}
 
     <script>
@@ -202,7 +203,10 @@
 
         $(document).ready(function () {
             // loadData();
-            $('#obat').select2();
+            $('#obat').select2({
+                placeholder: 'Pilih',
+                allowClear: true
+            })
             // $('#nama_pasien').select2();
         })
 
