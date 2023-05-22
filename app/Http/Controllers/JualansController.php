@@ -11,10 +11,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 class JualansController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         // $pelanggan = Pasien::select('id', 'nama_pasien')->get();
         // $pasien = Jualans::joinPasien();
@@ -30,6 +32,9 @@ class JualansController extends Controller
         } else {
             $ambil = Jualans::all()->last();
             $urut = (int)substr($ambil->nota, -8) + 1;
+            if ((int)substr($ambil->nota, -8) == 99999999) {
+                $urut = 10000001;
+            }
             $nomer = 'NT' . $tanggal . $urut;
         }
         return view('layouts.jualanHome', compact('obat', 'tanggals', 'nomer'));
@@ -94,12 +99,31 @@ class JualansController extends Controller
         }
     }
 
-    public function dataTable(Request $request) 
+    // public function dataTable(Request $request) 
+    // {
+    //     // $nota = $request->id;
+    //     $data = Jualans::join();
+    //         // ->where('jualans.nota', $nota)
+    //         // ->latest();
+    //     if (request()->ajax()) {
+    //         return datatables()->of($data)
+    //             ->addColumn('action', function ($data) {
+    //                 $button = '<button class="hapus btn btn-danger" id="' . $data->id .'" name="hapus">Hapus</button>';
+    //                 return $button;
+    //             })
+    //             ->rawColumns(['action'])
+    //             ->make(true);
+    //     }
+    //     return view('layouts.transaksiHome');
+
+    // }
+
+    public function tampilkan()
     {
-        $nota = $request->id;
-        $data = Jualans::join()
-            ->where('jualans.nota', $nota)
-            ->latest();
+        // $nota = $request->id;
+        $data = Jualans::join();
+            // ->where('jualans.nota', $nota)
+            // ->latest();
         if (request()->ajax()) {
             return datatables()->of($data)
                 ->addColumn('action', function ($data) {
@@ -109,11 +133,20 @@ class JualansController extends Controller
                 ->rawColumns(['action'])
                 ->make(true);
         }
+        return view('layouts.transaksiHome');
 
     }
 
-    // public function tampilkan()
-    // {
-    //     $data = DB::table('jualans')->get();
-    // }
+    public function hapus(Request $request) 
+    {
+        $data = Jualans::find($request->id);
+        $simpan = $data->delete($request->all());
+        if ($simpan) {
+            return response()->json(['text'=>'Data berhasil dihapus'], 200);
+        } 
+        else {
+            return response()->json(['text'=>'Data gagal dihapus'], 400);
+        }
+    }
+
 }

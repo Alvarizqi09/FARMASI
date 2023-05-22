@@ -14,7 +14,7 @@ body {
 }
 
 .sidebar {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -237,7 +237,7 @@ body {
 }
 
 .sidebar .profile-details {
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 260px;
   display: flex;
