@@ -22,7 +22,7 @@ class LoginController extends Controller{
         ];
 
         if(Auth::attempt($data)){
-            return redirect()->view('layout.main');
+            return redirect()->route('layout.main');
         }else{
             return redirect()->route('login')->with('failed','email atau password salah');
         }
