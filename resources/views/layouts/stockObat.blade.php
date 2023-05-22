@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layouts.main')
 
 @section('content')
     <x-slot name="header">
@@ -6,7 +6,6 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
           <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
@@ -25,6 +24,7 @@
         </div>
     </div>
     @endforeach
+    
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -68,7 +68,7 @@
               <form action="/stocks.store" method="POST" id="forms">
                 @csrf
                 {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
-                {{-- @method('POST') --}}
+                @method('POST')
                 <div class="form-group">
                     <label class="mr-sm-2" for="exampleInputEmail1">Nama Obat</label>
                     <select class="custom-select mr-sm-2 js-example-basic-single form-control form-control" name="obat" id="obat">
@@ -79,7 +79,7 @@
                     </select>
                 </div>
                 <div>
-                    JUMLAH STOK
+                    STOCK OBAT
                     <hr style="border: 1px solid red">
                 </div>
                 <div class="row">
@@ -109,18 +109,22 @@
                         id="stock" name="stock" class="form-control">
                 </div>
                 <div>
-                    STOK OBAT
+                    STOCK OBAT
                     <hr style="border: 1px solid red">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Harga Beli</label>
                     <input type="text" aria-label="telp" autocomplete="off" 
-                        id="beli" name="beli" maxlength="12" class="form-control">
+                        id="beli" name="beli" maxlength="12" class="form-control"
+                        data-inputmask="'alias' : 'numeric', 'digits': 2, 'prefix': 'Rp. ', 'groupSeparator': ',',
+                        'autoGroup' : true, 'digitsOptional' : false ">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Harga Jual</label>
                     <input type="text" aria-label="telp" autocomplete="off" 
-                        id="jual" name="jual" maxlength="12" class="form-control">
+                        id="jual" name="jual" maxlength="12" class="form-control"
+                        data-inputmask="'alias' : 'numeric', 'digits': 2, 'prefix': 'Rp. ', 'groupSeparator': ',',
+                        'autoGroup' : true, 'digitsOptional' : false ">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Tanggal Masuk</label>
@@ -148,7 +152,7 @@
                 </div>
             </div>
             <div class="modal-footer justify-content-between">
-                <button type="button" name="batal" id="btn-tutup" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                <button type="button" name="batal" id="btn-tutup" hidden class="btn btn-outline-light" data-dismiss="modal">Close</button>
                 <button type="submit" id="simpan" class="btn btn-outline-light">Save</button>
             </div>
         </form>
@@ -166,11 +170,13 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src=""></script>
     <script>
 
         $(document).ready(function () {
             loadData()
+            $('#obat').select2();
         })
 
         function loadData() {
@@ -271,6 +277,7 @@
             let akhir = (awal + masuk) - keluar
             $('#stock').val(akhir)
         })
+        
 
         // edit
         $(document).on('click', '.edit', function () {
@@ -356,8 +363,6 @@
                 }
             })
     })
-        
-
             
     </script>
 
