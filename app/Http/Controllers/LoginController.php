@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\Auth\LoginController;
+<?php namespace App\Http\Controllers\LoginController;
 
 
 use App\Http\Requests;
@@ -21,11 +21,5 @@ class LoginController extends Controller{
             'password' => $request->password,
         ];
 
-        if(Auth::attempt($data))
-        {
-            return redirect::intended('resources/views/layout/main.blade.php');
-        }else{
-            return redirect()->route('login')->with('failed','email atau password salah');
-        }
     }
 }
