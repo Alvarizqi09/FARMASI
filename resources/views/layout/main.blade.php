@@ -66,7 +66,7 @@
         </a>
         <ul class="sub-menu blank">
           <li>
-            <a class="link_name" href="{{route('login)}}"> <b>Home</b> </a>
+            <a class="link_name" href="{{route('login')}}"> <b>Home</b> </a>
           </li>
         </ul>
       </li>
