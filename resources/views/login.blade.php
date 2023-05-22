@@ -96,10 +96,5 @@
 <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-@if($message = get('failed'))
-    <script>
-        Swal.fire('{{$message}}')
-    </script>
-@endif
 </body>
 </html>
