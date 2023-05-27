@@ -182,7 +182,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvide::class,
-        Laravel\Socialite\Facades\Socialite::class,
+        
         /*
          * Package Service Providers...
          */
