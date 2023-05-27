@@ -5,11 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\LoginController;
 use Illuminate\Http\Request;
+use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 
 class LoginController extends Controller{
     public function index(){
-        return view('login');
+        return view('auth.login');
     }
     public function login_proses(Request $request){
         $request->validate([
