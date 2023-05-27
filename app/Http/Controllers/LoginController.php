@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Socialite;
 use App\Http\Controllers\LoginController;
 use Illuminate\Http\Request;
 use auth;
