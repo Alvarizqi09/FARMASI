@@ -19,6 +19,7 @@ use App\Http\Controllers\PasienController;
 use App\Http\Controllers\JualansController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\GoogleController;
 
 
 
@@ -35,7 +36,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function() {
+    return view('login');
+});
+
+Route::get('/dashboard', function () {
     return view('layout.main');
 });
 
@@ -131,3 +136,11 @@ Route::post('pengaduan.store', [PengaduanController::class, 'store'])->name('pen
 Route::post('pengaduan.edits', [PengaduanController::class, 'edits'])->name('pengaduan.edits');
 Route::post('pengaduan.updates', [PengaduanController::class, 'updates'])->name('pengaduan.updates');
 Route::post('pengaduan.hapus', [PengaduanController::class, 'hapus'])->name('pengaduan.hapus');
+
+//login google
+Route::controller(GoogleController::class)->group(function(){
+    Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
+    Route::get('auth/google/callback', 'handleGoogleCallback');
+});
+
+// require __DIR__.'/auth.php';
