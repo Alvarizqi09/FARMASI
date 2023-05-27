@@ -7,8 +7,6 @@ use App\Http\Controllers\Socialite;
 use App\Http\Controllers\LoginController;
 use Illuminate\Http\Request;
 use auth;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 
 class LoginController extends Controller{
