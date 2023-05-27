@@ -181,7 +181,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        
         /*
          * Package Service Providers...
          */
@@ -197,7 +197,7 @@ return [
         Yajra\DataTables\DataTablesServiceProvider::class,
 
     ],
-
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
