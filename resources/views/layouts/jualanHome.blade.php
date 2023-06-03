@@ -203,10 +203,7 @@
 
         $(document).ready(function () {
             // loadData();
-            $('#obat').select2({
-                placeholder: 'Pilih',
-                allowClear: true
-            })
+            $('#obat').select2()
             // $('#nama_pasien').select2();
         })
 
