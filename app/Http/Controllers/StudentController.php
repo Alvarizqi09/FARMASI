@@ -56,12 +56,12 @@ class StudentController extends Controller
      */
     public function show(student $student): View
     {
-        return view('student.show',compact('students'));
+        return view('student.show',compact('student'));
     }
     public function edit(student $students): View
     {
 
-        return view('student.edit',compact('students'));
+        return view('student.edit',compact('student'));
     }
   
     /**
