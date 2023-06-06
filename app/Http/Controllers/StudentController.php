@@ -31,7 +31,11 @@ class StudentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): RedirectResponse
+    public function show(student $student): View
+    {
+        return view('student.show',compact('students'));
+    }
+     public function store(Request $request): RedirectResponse
     {
         $request->validate([
             'NIM' => 'required',
