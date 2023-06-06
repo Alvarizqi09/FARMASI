@@ -21,7 +21,7 @@ use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\MahasiswaController;
-
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ProdiFariskaController;
 use App\Http\Controllers\MatkulFariskaController;
 use App\Http\Controllers\MahasiswaFariskaController;
