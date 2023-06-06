@@ -16,49 +16,49 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>NIM</strong>
-                {{ $students->NIM }}
+                {{ $student->NIM }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nama :</strong>
-                {{ $students->nama }}
+                {{ $student->nama }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>jurusan:</strong>
-                {{ $students->jurusan }}
+                {{ $student->jurusan }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>No Telepon:</strong>
-                {{ $students->telepon }}
+                {{ $student->telepon }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Jeniskelamin:</strong>
-                {{ $students->jeniskelamin }}
+                {{ $student->jeniskelamin }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>email:</strong>
-                {{ $students->email }}
+                {{ $student->email }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>NIK:</strong>
-                {{ $students->NIK }}
+                {{ $student->NIK }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>alamat:</strong>
-                {{ $students->alamat }}
+                {{ $student->alamat }}
             </div>
         </div>
     </div>
