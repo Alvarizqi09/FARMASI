@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->integer('nilai');
             $table->timestamps();
-            $table->unsignedBigInteger('prodi');
+            $table->unsignedBigInteger('nama');
             $table->foreign('nama')->references('id')->on('mahasiswa_fariskas')->onDelete('cascade');
-            $table->unsignedBigInteger('prodi');
+            $table->unsignedBigInteger('mk');
             $table->foreign('mk')->references('id')->on('matkul_fariskas')->onDelete('cascade');
         });
     }
