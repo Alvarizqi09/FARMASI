@@ -59,18 +59,7 @@
       </div>
     </div>
     <ul class="nav-links">
-      <li>
-        <a href="#">
-          <i class="bx bx-home-alt"></i>
-          <span class="link_name"> <b>Home</b> </span>
-        </a>
-        <ul class="sub-menu blank">
-          <li>
-            <a class="link_name" href="#"> <b>Home</b> </a>
-          </li>
-        </ul>
-      </li>
-      <li>
+    <li>
         <div class="iocn-link">
           <a href="#">
             <i class="bx bxs-notepad"></i>
@@ -177,6 +166,16 @@
         </ul>
       </li>
       <li>
+        <a href="#">
+          <i class="bx bx-home-alt"></i>
+          <span class="link_name"> <b>Home</b> </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li>
+            <a class="link_name" href="#"> <b>Home</b> </a>
+          </li>
+        </ul>
+      </li>
         <div class="iocn-link">
           <a href="#">
             <i class="bx bx-cog"></i>
