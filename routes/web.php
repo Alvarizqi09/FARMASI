@@ -157,3 +157,4 @@ Route::post('pengaduan.hapus', [PengaduanController::class, 'hapus'])->name('pen
 Route::resource('/prodifariskas', ProdiFariskaController::class);
 Route::resource('/matkulfariskas', MatkulFariskaController::class);
 Route::resource('/mahasiswafariskas', MahasiswaFariskaController::class);
+Route::resource('/nilaifariskas', NilaiFariskaController::class);
