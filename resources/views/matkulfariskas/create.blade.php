@@ -30,7 +30,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>ID Matkul:</strong>
-                <input type="number" name="idMk" class="form-control">
+                <input type="number" name="idMK" class="form-control">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

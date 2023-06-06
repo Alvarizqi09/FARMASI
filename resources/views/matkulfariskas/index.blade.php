@@ -29,7 +29,7 @@
         @foreach ($matkulfariskas as $row)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $row->idMk }}</td>
+            <td>{{ $row->idMK }}</td>
             <td>{{ $row->nama_mk }}</td>
 
             <td>
