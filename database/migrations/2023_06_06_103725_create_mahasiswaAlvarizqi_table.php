@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('mahasiswaAlvarizqi', function (Blueprint $table) {
             $table->id();
-            $table->integer("NIM");
+            $table->BigInteger("NIM",'16');
             $table->string("nama");
             $table->string("jurusan");
             $table->integer("telepon");
-            $table->string("jeniskelamin");
+            $table->enum('jeniskelamin', ['Laki-laki', 'Perempuan']);
             $table->string("email");
             $table->integer("NIK");
             $table->char("alamat");

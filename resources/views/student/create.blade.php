@@ -53,8 +53,12 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>jeniskelamin</strong>
-                <input type="string" name="jeniskelamin" class="form-control" placeholder="Jeniskelamin">
+                <strong>Jenis Kelamin:</strong>
+                <select name="jeniskelamin" id="jeniskelamin">
+                    <option value="">Pilih</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
