@@ -25,6 +25,8 @@ use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProdiFariskaController;
 use App\Http\Controllers\MatkulFariskaController;
 use App\Http\Controllers\MahasiswaFariskaController;
+use App\Http\Controllers\NilaiFariskaController;
+
 
 
 use Illuminate\Support\Facades\Route;
