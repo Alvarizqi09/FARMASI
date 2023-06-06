@@ -23,7 +23,7 @@
     </div>
 @endif
      
-<form action="{{ route('student.update',$students->id) }}" method="POST" enctype="multipart/form-data"> 
+<form action="{{ route('student.update',$student->id) }}" method="POST" enctype="multipart/form-data"> 
         @csrf
         @method('PUT')
     
