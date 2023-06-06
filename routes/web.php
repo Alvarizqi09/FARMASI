@@ -20,6 +20,7 @@ use App\Http\Controllers\JualansController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\MahasiswaController;
 
 
 
@@ -36,9 +37,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function() {
-    return view('login');
-});
+// Route::get('/', function() {
+//     return view('login');
+// });
 
 Route::get('/dashboard', function () {
     return view('layout.main');
@@ -79,6 +80,9 @@ Route::get('/tampilkandata/{id}',[PembelianController::class, 'tampilkandata'])-
 Route::post('/updatedata/{id}',[PembelianController::class, 'updatedata'])->name('updatedata');
 
 Route::get('/delete/{id}',[PembelianController::class, 'delete'])->name('delete');
+
+// route mahasiswa
+Route::resource('mahasiswa', MahasiswaController::class);
 
 // crud category
 Route::get('category.index', [CategoryController::class, 'index'])->name('category.index');
@@ -138,9 +142,9 @@ Route::post('pengaduan.updates', [PengaduanController::class, 'updates'])->name(
 Route::post('pengaduan.hapus', [PengaduanController::class, 'hapus'])->name('pengaduan.hapus');
 
 //login google
-Route::controller(GoogleController::class)->group(function(){
-    Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
-    Route::get('auth/google/callback', 'handleGoogleCallback');
-});
+// Route::controller(GoogleController::class)->group(function(){
+//     Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
+//     Route::get('auth/google/callback', 'handleGoogleCallback');
+// });
 
 // require __DIR__.'/auth.php';
