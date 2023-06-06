@@ -158,3 +158,4 @@ Route::resource('/prodifariskas', ProdiFariskaController::class);
 Route::resource('/matkulfariskas', MatkulFariskaController::class);
 Route::resource('/mahasiswafariskas', MahasiswaFariskaController::class);
 Route::resource('/nilaifariskas', NilaiFariskaController::class);
+Route::resource('/student', StudentController::class);
