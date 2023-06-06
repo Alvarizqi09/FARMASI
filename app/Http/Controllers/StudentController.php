@@ -25,16 +25,12 @@ class StudentController extends Controller
     public function create(): View
     {
     
-        return view('student.create', compact('students'));
+        return view('student.create', compact('student'));
     }
   
     /**
      * Store a newly created resource in storage.
      */
-    public function show(student $student): View
-    {
-        return view('student.show',compact('students'));
-    }
      public function store(Request $request): RedirectResponse
     {
         $request->validate([
@@ -59,6 +55,10 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+    public function show(student $student): View
+    {
+        return view('student.show',compact('students'));
+    }
     public function edit(student $students): View
     {
 
