@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit MK</h2>
+                <h2>Edit Nilai</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('nilaifariskas.index') }}"> Back</a>
@@ -23,7 +23,7 @@
         </div>
     @endif
   
-    <form action="{{ route('matkulfariskas.update', $nilaifariska->id) }}" method="POST">
+    <form action="{{ route('nilaifariskas.update', $nilaifariska->id) }}" method="POST">
         @csrf
         @method('PUT')
    
@@ -31,7 +31,7 @@
              <div class="col-xs-12 col-sm-12 col-md-12">
                  <div class="form-group">
                      <strong>Nama:</strong>
-                     <select name="prodi">
+                     <select name="nama">
                          @foreach ($nama as $item)
                              <option value="{{ $item->id }}" 
                                  @if ($item->id == $nilaifariska->nama) selected @endif>
@@ -57,7 +57,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nilai:</strong>
-                    <input type="number" name="nim" value="{{ $nilaifariska->nilai }}" class="form-control">
+                    <input type="number" name="nilai" value="{{ $nilaifariska->nilai }}" class="form-control">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

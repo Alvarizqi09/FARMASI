@@ -7,7 +7,7 @@
             <h2>Add New Mata Kuliah</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('mahasiswafariskas.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('nilaifariskas.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
     </div>
 @endif
    
-<form action="{{ route('mahasiswafariskas.store') }}" method="POST">
+<form action="{{ route('nilaifariskas.store') }}" method="POST">
     @csrf
   
      <div class="row">
@@ -41,7 +41,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>MK:</strong>
-                <select name="nama" class="form-control">
+                <select name="mk" class="form-control">
                     <option value="">Pilih MK</option>
                     @foreach ($mk as $item)
                         <option value="{{ $item->id }}">{{ $item->nama_mk }}</option>
