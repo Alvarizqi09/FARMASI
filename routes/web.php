@@ -46,7 +46,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('login');
 // });
 
-Route::get('/dashboard', function () {
+Route::get('/', function () {
     return view('layout.main');
 });
 
