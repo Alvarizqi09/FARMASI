@@ -44,7 +44,7 @@
      
                     <a class="btn btn-info" href="{{ route('student.show',$student->id) }}">Show</a>
       
-                    <a class="btn btn-primary" href="{{ route('student.edit',$students->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('student.edit',$student->id) }}">Edit</a>
      
                     @csrf
                     @method('DELETE')
