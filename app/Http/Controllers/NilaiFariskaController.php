@@ -14,7 +14,7 @@ class NilaiFariskaController extends Controller
 {
     public function index(): View
     {
-        $mk = matkulFariska::select('id', 'nama_matkul')->get();
+        $mk = matkulFariska::select('id', 'nama_mk')->get();
         $nama = mahasiswaFariska::select('id', 'nama')->get();
 
         $nilaifariskas = nilaiFariska::latest()->paginate(5);
@@ -28,7 +28,9 @@ class NilaiFariskaController extends Controller
      */
     public function create(): View
     {
-        return view('nilaifariskas.create');
+        $mk = matkulFariska::select('id', 'nama_mk')->get();
+        $nama = mahasiswaFariska::select('id', 'nama')->get();
+        return view('nilaifariskas.create', compact('mk', 'nama'));
     }
   
     /**
@@ -54,7 +56,9 @@ class NilaiFariskaController extends Controller
      */
     public function edit(nilaiFariska $nilaifariska): View
     {
-        return view('nilaifariskas.edit',compact('nilaifariska'));
+        $mk = matkulFariska::select('id', 'nama_mk')->get();
+        $nama = mahasiswaFariska::select('id', 'nama')->get();
+        return view('nilaifariskas.edit',compact('nilaifariska', 'mk', 'nama'));
     }
   
     /**
