@@ -58,7 +58,7 @@ class StudentController extends Controller
     {
         return view('student.show',compact('student'));
     }
-    public function edit(student $students): View
+    public function edit(student $student): View
     {
 
         return view('student.edit',compact('student'));
