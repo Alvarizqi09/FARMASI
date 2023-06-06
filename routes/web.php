@@ -22,6 +22,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\MahasiswaController;
 
+use App\Http\Controllers\ProdiFariskaController;
+use App\Http\Controllers\MatkulFariskaController;
+use App\Http\Controllers\MahasiswaFariskaController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -148,3 +151,7 @@ Route::post('pengaduan.hapus', [PengaduanController::class, 'hapus'])->name('pen
 // });
 
 // require __DIR__.'/auth.php';
+
+Route::resource('/prodifariskas', ProdiFariskaController::class);
+Route::resource('/matkulfariskas', MatkulFariskaController::class);
+Route::resource('/mahasiswafariskas', MahasiswaFariskaController::class);
