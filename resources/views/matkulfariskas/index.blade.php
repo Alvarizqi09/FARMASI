@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout.main')
  
 @section('content')
     <div class="row">
@@ -7,7 +7,7 @@
                 <h2>UAS RPL</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('matkulfariskas.create') }}"> Create New Prodi</a>
+                <a class="btn btn-success" href="{{ route('matkulfariskas.create') }}"> Create New MK</a>
             </div>
         </div>
     </div>

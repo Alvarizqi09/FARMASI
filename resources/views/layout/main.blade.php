@@ -60,14 +60,40 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a href="{{route('login')}}">
+        <a href="#">
           <i class="bx bx-home-alt"></i>
           <span class="link_name"> <b>Home</b> </span>
         </a>
         <ul class="sub-menu blank">
           <li>
-            <a class="link_name" href="{{route('login')}}"> <b>Home</b> </a>
+            <a class="link_name" href="#"> <b>Home</b> </a>
           </li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class="bx bxs-notepad"></i>
+            <span class="link_name"> <b>UAS</b> </span>
+          </a>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <ul class="sub-menu">
+          <li>
+            <a class="link_name" href="#"> <b>UAS</b> </a>
+          </li>
+          <li><a href="#">Fariska Ratna F</a>
+            <ul>
+              <li><a href="/prodifariskas">Data Prodi</a></li>
+              <li><a href="/matkulfariskas">Data Matkul</a></li>
+              <li><a href="/mahasiswafariskas">Data Mahasiswa</a></li>
+              <li><a href="/nilaifariskas">Data Nilai</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Alvarizqi</a></li>
+          <li><a href="#">Safira Husnun N</a></li>
+          <li><a href="#">Susilo Surya P</a></li>
+          <li><a href="#">Sandya Agung A</a></li>
         </ul>
       </li>
       <li>
@@ -132,7 +158,7 @@
           </li>
           <li><a href="/jualans">Tambah Penjualan</a></li>
           <li><a href="{{ route('jualans.home') }}">Laporan Penjualan</a></li>
-          {{-- <li><a href="/pembelians">Pembelian Obat</a></li> --}}
+          <li><a href="/pembelians">Pembelian Obat</a></li>
         </ul>
       </li>
       <li>
