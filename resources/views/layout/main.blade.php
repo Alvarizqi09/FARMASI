@@ -81,7 +81,7 @@
           </li>
           <li><a href="/student">Alvarizqi</a></li>
           <li><a href="#">Safira Husnun N</a></li>
-          <li><a href="#">Susilo Surya P</a></li>
+          <li><a href="/mahasiswa">Susilo Surya P</a></li>
           <li><a href="#">Sandya Agung A</a></li>
         </ul>
       </li>

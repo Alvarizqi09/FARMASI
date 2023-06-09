@@ -49,6 +49,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layout.main');
 });
+Route::get('/login', function () {
+    return view('Login.login');
+});
+
 
 Route::resource('stocks', StockCRUDController::class);
 Route::resource('pegawai', pegawaiController::class);
@@ -60,7 +64,6 @@ Route::resource('inventories', InventoryCRUDController::class);
 Route::resource('pembelian', PembelianController::class);
 Route::resource('Transaksi', TransaksiController::class);
 Route::resource('drugs', DrugController::class);
-Route::resource('login', LoginController::class);
 Route::resource('student', StudentController::class);
 // Route::resource('types', TypeDrugController::class);
 // Route::resource('categories', CategoryController::class);

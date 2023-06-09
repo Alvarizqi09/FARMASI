@@ -3,25 +3,33 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\LoginController;
+use App\Models\User;
+use Exception;
+use Auth;
 use Illuminate\Http\Request;
-use auth;
+use Illuminate\Support\Facades\Hash;
+
 
 
 class LoginController extends Controller{
     public function index(){
-        return view('auth.login');
+        return view('Login.login');
     }
     public function login_proses(Request $request){
-        $request->validate([
-            'email' => 'required',
-            'password'  =>  'required',
-        ]);
+        if (Auth::attempt($request->only('email','password'))){
+            return view('layout.main');
+        }
+        return redirect('login');
+        
+       // --$request->validate([
+        //    'email' => 'required',
+         //   'password'  =>  'required',
+        //
 
-        $data=[
-            'email' => $request->email,
-            'password' => $request->password,
-        ];
+       // $data=[
+       //     'email' => $request->email,
+      //      'password' => $request->password,
+      //p  ];
 
     }
 }
