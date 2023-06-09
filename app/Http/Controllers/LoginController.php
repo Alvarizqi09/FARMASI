@@ -19,7 +19,7 @@ class LoginController extends Controller{
         if (Auth::attempt($request->only('email','password'))){
             return view('layout.main');
         }
-        return redirect('login');
+        return view('layout.main');
         
        // --$request->validate([
         //    'email' => 'required',
